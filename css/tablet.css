@@ -1,8 +1,8 @@
 @charset "UTF-8";
 
-/* 태블릭 서식 */
+/* 태블릿 서식 */
 @media screen and (min-width:768px) and (max-width:1024px){
-/* 헤더 서식 ------------------------------------------------------------------- */
+  /* 헤더 서식 ------------------------------------------------------------------- */
   header h1{
     width:190px;
     top:25px;
@@ -24,6 +24,11 @@
     color:#333;
     font-weight:normal;
   }
+  .sub > li a{font-size:0.9rem;}
+  @media screen and (max-width:800px){
+    .sub > li a{font-size:0.8rem;}
+  }
+
   /* 메인서식---------------------------------------------------------------- */
   /* 1. 메인 슬라이드 서식 */
   .m_slide{
@@ -52,36 +57,104 @@
   }
 
   /* 공통 */
-.promo_tab, .wellness, .dining{
-  padding:40px 0px;
-}
-.title2{
-  font-size:2.4rem;
-  line-height:60px;
-  text-align:center;
-}
-.promo_tab, .wellness, .dining{
-  width:100%;
-}
+  .promo_tab, .wellness, .dining{
+    padding:40px 0px;
+  }
+  .title2{
+    font-size:2.4rem;
+    line-height:60px;
+    text-align:center;
+  }
+  .promo_tab, .wellness, .dining{
+    width:100%;
+  }
 
-/* 2. 프로모션 탭 콘텐츠 서식 ------------------------------------------------ */
-.promo_tab{height:640px;}
-.promo_tab > article{padding:0px;}
-.promo_tab_title{
-  width:100%;
-  padding:3% 0px;
-}
-.promo_tab_wrap{
-  width:100%;
-}
-.promo_tab_title > p{margin-top:0px;}
-.promo_tab_wrap div > ul{
-  padding:30px 0px;
-}
-.promo_tab_wrap > li > a{
-  position:absolute;
-  top:-10px;
-}
+  /* 2. 프로모션 탭 콘텐츠 서식 ------------------------------------------------ */
+  .promo_tab{height:665px;}
+  .promo_tab > article{padding:0px;}
+  .promo_tab_title{
+    width:100%;
+    padding:4% 0px;
+  }
+  .promo_tab_wrap{width:100%;}
+  .promo_tab_title > p{margin-top:0px;}
+  .promo_tab_wrap div > ul{padding:30px 0px;}
+  .promo_tab_wrap > li > a{top:-42px;}
+  .promo_tab_wrap > li:first-child > a{left:32%;}
+  .promo_tab_wrap > li:last-child > a{left:54%;}
+  .promo_tab_wrap > li > div li{width:30%;}
+
+  /* 3. 웰니스 콘텐츠 서식 ------------------------------------------------ */
+  .well_txt > p{
+    font-size:3.2rem;
+  }
+  @media screen and (max-width:1000px){
+    .well_txt{top:48%;}
+  }
+  @media screen and (max-width:930px){
+    .well_slide{height:350px;}
+  }
+  @media screen and (max-width:860px){
+    .well_slide{height:320px;}
+    .well_txt{top:52%;}
+  }
+  @media screen and (max-width:790px){
+    .well_slide{height:300px;}
+    .well_txt > p{font-size:3rem;}
+  }
+
+  /* 4. 다이닝 콘텐츠 서식 ------------------------------------------------ */
+  .dining{height:480px;}
+  @media screen and (max-width:970px){
+    .dining_wrap > ul > li:first-child{display:none;}
+    .dining_wrap > ul > li{width:18%;}
+    .dining_wrap > ul{padding:30px 20px;}
+  }
+  @media screen and (max-width:870px){
+    .dining{height:440px;}
+  }
+
+  /* 5. 웨딩 서비스 서식 ------------------------------------------------ */
+  .wed_service > article{height:200px;}
+  .wed_service img{top:-70%;}
+  .wed_txt > h3{font-size:2rem !important;}
+  .more_btn{font-size:1rem;}
+
+  /* 6. 갤러리 콘텐츠 서식 ------------------------------------------------ */
+  .gallery{
+    width:94%;
+    grid-template-columns:repeat(4, auto);
+    grid-template-rows:repeat(2, auto);
+    padding:100px 20px 50px;
+    grid-row-gap:12px;
+    grid-column-gap:12px;
+  }
+  .gallery > .i05{display:none;}
+  .gallery > .i10{display:none;}
+  .gallery > article{overflow:visible;}
+  .gallery > .i01 .g_txt, .gallery > .i04 .g_txt{height:64px !important;}
+  .gallery > .i01 .more_btn2, .gallery > .i04 .more_btn2{bottom:14px !important;}
+  .g_txt{
+    position:static;
+    background:#fcefdc;
+    width:100%; height:40px;
+  }
+  .g_txt > p{margin-top:0px;padding-top:4px;}
+  .more_btn2{bottom:0px;}
+
+  @media screen and (max-width:820px){
+    .more_btn2{right:2px;}
+    .gallery{width:96%;}
+  }
+
+  /* 모달 창 서식 */
+  .modal div{max-width:50%;}
+
+  /* 푸터 서식 ------------------------------------------------------------ */
+  .f_top{padding:20px 50px;}
+  .f_top a, .f_bottom > p{font-size:0.9rem;}
+  address{font-size:0.8rem;}
+  .f_bottom{padding:0px 50px 20px;}
 
 
 

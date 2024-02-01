@@ -11,12 +11,19 @@ $(document).ready(function(){
     $('header .gnb').fadeToggle();
   });
 
-  // gnb메뉴 클릭시 해당 서브메뉴 보이게 하기
-  gnb.click(function(){
-    //$('.sub').hide(); //보이는 서브 숨기고
-    // 선택한 서브만 보이게한다.
-    $(this).next().toggle().parent().siblings().find('.sub').hide();
-  });
+  $(window).resize(function(){
+    w_width = $(window).innerWidth();
+
+    if(w_width<=767){
+      // gnb메뉴 클릭시 해당 서브메뉴 보이게 하기
+      gnb.click(function(){
+        //$('.sub').hide(); //보이는 서브 숨기고
+        // 선택한 서브만 보이게한다.
+        $(this).next().toggle().parent().siblings().find('.sub').hide();
+      });
+    }
+
+  }).resize();
 
   // 1. 메인 슬라이드 -----------------------------------------------------------
   const l_btn = $('.m_slide i.fa-angle-left'); //왼쪽 버튼
@@ -119,35 +126,51 @@ $(document).ready(function(){
   // 4. 다이닝 콘텐츠 -----------------------------------------------------------
   const d_list = $('.dining_wrap > ul > li a');
 
-  d_list.mouseenter(function(){
-    $(this).find('p').fadeIn();
-    $(this).find('img').css('transform','scale(1.1)');
-    // $(this).css('background','rgba(255,255,255,.5)');
-  });
-  d_list.mouseleave(function(){
-    $(this).find('p').fadeOut();
-    $(this).find('img').css('transform','scale(1.0)');
-  });
+  $(window).resize(function(){
+    w_width = $(window).innerWidth();
+
+    if(w_width>=1025){
+      d_list.mouseenter(function(){
+        $(this).find('p').fadeIn();
+        $(this).find('img').css('transform','scale(1.1)');
+        // $(this).css('background','rgba(255,255,255,.5)');
+      });
+      d_list.mouseleave(function(){
+        $(this).find('p').fadeOut();
+        $(this).find('img').css('transform','scale(1.0)');
+      });
+    }
+  }).resize();
+
 
   // 5. 웨딩, 서비스 콘텐츠 ----------------------------------------------------
   let wed_con = $('.wed_service > article > a');
   let more_btn = $('.more_btn');
 
-  wed_con.mouseenter(function(){
-    $(this).parent().height(400);
-  });
-  wed_con.mouseleave(function(){
-    $(this).parent().height(180);
-  });
-  more_btn.mouseenter(function(){
-    $(this).css('background','#fff').css('color','#333');
-  });
-  more_btn.mouseleave(function(){
-    $(this).css('background','none').css('color','#fff');
-  });
+  $(window).resize(function(){
+    w_width = $(window).innerWidth();
+
+    if(w_width>=1025){
+      wed_con.mouseenter(function(){
+        $(this).parent().height(400);
+      });
+      wed_con.mouseleave(function(){
+        $(this).parent().height(180);
+      });
+      more_btn.mouseenter(function(){
+        $(this).css('background','#fff').css('color','#333');
+      });
+      more_btn.mouseleave(function(){
+        $(this).css('background','none').css('color','#fff');
+      });
+    }
+  }).resize();
+
+
 
   // 6. 갤러리 콘텐츠 --------------------------------------------------------
   const g_list = $('.gallery article');
+  let more_btn2 = $('.more_btn2');
 
   $(window).resize(function(){
     w_width = $(window).innerWidth();
@@ -159,6 +182,14 @@ $(document).ready(function(){
       g_list.mouseleave(function(){
         $('.g_txt').stop().animate({'bottom':'-55px'},300);
       });
+      more_btn2.mouseenter(function(){
+        $(this).css('background','#333').css('color','#fff').css('border','none');
+      });
+      more_btn2.mouseleave(function(){
+        $(this).css('background','none').css('color','#333').css('border','1px solid #333');
+      });
+    }else{
+      more_btn2.css('background','#333').css('color','#fff');
     }
 
   }).resize();
@@ -221,13 +252,6 @@ $(document).ready(function(){
       };
 
       return false;
-  });
-  let more_btn2 = $('.more_btn2');
-  more_btn2.mouseenter(function(){
-    $(this).css('background','#333').css('color','#fff').css('border','none');
-  });
-  more_btn2.mouseleave(function(){
-    $(this).css('background','none').css('color','#333');
   });
 
 
