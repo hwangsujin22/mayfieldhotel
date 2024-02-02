@@ -2,15 +2,277 @@
 
 /* 모바일 서식 */
 @media screen and (max-width:767px) {
+  /* 헤더 서식 ------------------------------------------------------------ */
+  header{height:65px;}
+  header h1{width:140px;}
 
+  .h_left > a:first-child, .h_right > ul > li:first-child > a:first-child{display:none;}
+  .h_left i.fa-user, .h_right i.fa-calendar-check{display:block;}
+  i.fa-user, i.fa-calendar-check{font-size:1.5rem;}
 
+  .h_left, .h_right > ul{padding:18px 15px;}
+  .h_right > ul > li{width:30px;}
+  #toggle{width:30px;}
+  #toggle span{ width:25px;left:10px;}
+  #toggle span:nth-child(2){top:12px;}
+  #toggle span:last-child{bottom:4px;}
 
+  /* gnb 서식 */
+  .gnb{
+    top:70px;
+    width:94%; left:3%;
+    z-index:1001;
+    padding-top:20px;
+    flex-direction:column;
+    align-items:center;
+    display:block;
+    border:1px solid #ccc;
+    display:none;
+  }
+  .gnb > ul{
+    width:100%;
+    display:block;
+    text-align:center;
+  }
+  .gnb > ul > li i.fas{display:inline;}
+  .gnb > ul > li > a{font-size:1rem;}
+  .gnb > ul > li a:hover{color:#333;font-weight:600;}
+  .gnb .sub > li a:hover{color:#333;font-weight:normal;}
+  .sub > li a{font-size:0.9rem;}
+  .sub{
+    display:none;
+    box-shadow:0px 3px 2px #ccc;
+    border:1px solid #ccc;
+    z-index:100;
+    background:#e8e8e8;
+  }
+  .rotate1{
+    transform:rotate(180deg);
+  }
+  /* 메인서식---------------------------------------------------------------- */
+  /* 1. 메인 슬라이드 서식 */
+  .m_slide{height:500px;}
+  .m_slide > h2{
+    font-size:1.4rem;
+    width:80%;
+    text-align:center;
+  }
+  .m_slide > div > img{width:160%;}
+  .m_slide i.fas{font-size:1.6rem;}
+  .slide1{transform:translate(-220px, -80px);}
+  .slide3{transform:translate(-170px, -20px);}
+
+  @media screen and (max-width:720px){
+    .m_slide > div > img{width:180%;}
+    .slide1{transform:translate(-260px, -100px);}
+    .slide3{transform:translate(-170px, -40px);}
+    .slide4{transform:translate(-170px, -80px);}
+  }
+  @media screen and (max-width:660px){
+    .m_slide{height:450px;}
+  }
+  @media screen and (max-width:610px){
+    .m_slide{height:430px;}
+    .slide1{transform:translate(-220px, -90px);}
+  }
+  @media screen and (max-width:570px){
+    .m_slide{height:400px;}
+    .m_slide > div > img{width:180%;}
+    .slide1{transform:translate(-180px, -70px);}
+    .slide4{transform:translate(-100px, -30px);}
+  }
+  @media screen and (max-width:525px){
+    .m_slide{height:370px;}
+    .m_slide > div > img{width:170%;}
+    .slide1{transform:translate(-160px, -50px);}
+    .m_slide > h2{font-size:1.1rem;}
+  }
+  @media screen and (max-width:495px){
+    .m_slide{height:340px;}
+  }
+  @media screen and (max-width:460px){
+    .m_slide{height:300px;}
+    .m_slide > div > img{width:160%;}
+    .slide1{transform:translate(-120px, -50px);}
+    .slide2{transform:translate(-10px, -40px);}
+    .slide3{transform:translate(-120px, -40px);}
+    .m_slide i.fas{font-size:1.3rem;}
+  }
+  @media screen and (max-width:440px){
+    .m_slide > div > img{width:180%;}
+    .slide1{transform:translate(-160px, -55px);}
+  }
+  @media screen and (max-width:400px){
+    .m_slide > div > img{width:190%;}
+    .slide1{transform:translate(-160px, -45px);}
+  }
+  @media screen and (max-width:370px){
+    .m_slide > div > img{width:200%;}
+    .slide1{transform:translate(-160px, -35px);}
+  }
+
+  /* 공통 */
+  .promo_tab, .wellness, .dining{padding:40px 0px;}
+  .title2{
+    font-size:2rem;
+    line-height:60px;
+    text-align:center;
+  }
+  .promo_tab, .wellness, .dining{width:100%;}
+  .promo_tab_title > p, .wellness > p, .dining > p, .gallery > p, .promo_tab_wrap div a > p:first-of-type, .wed_txt > p{font-size:0.8rem;}
+
+  /* 2. 프로모션 탭 콘텐츠 서식 ------------------------------------------------ */
+  .promo_tab{height:640px;}
+  .promo_tab > article{padding:0px;}
+  .promo_tab_title{width:100%;padding:4% 0px;}
+  .promo_tab_wrap{width:100%;}
+  .promo_tab_title > p{margin-top:0px;}
+  .promo_tab_wrap div > ul{padding:30px 0px;}
+  .promo_tab_wrap > li > a{top:-42px;}
+  .promo_tab_wrap > li:first-child > a{left:32%;}
+  .promo_tab_wrap > li:last-child > a{left:54%;}
+  .promo_tab_wrap > li > div li{width:45%;}
+  .promo_tab_wrap p:first-of-type{height:60px;}
+  .con01 li:last-child, .con02 li:last-child{display:none;}
+  .promo_tab_wrap h5{font-size:1.2rem;}
+  @media screen and (max-width:620px){
+    .promo_tab{height:590px;}
+    .promo_tab_wrap > li > a{top:-30px;}
+    .promo_tab_wrap > li:first-child > a{left:25%;}
+    .promo_tab_wrap > li:last-child > a{left:54%;}
+  }
+  @media screen and (max-width:460px){
+    .promo_tab{height:1450px;}
+    .promo_tab_wrap > li:first-child > a{left:18%;}
+    .promo_tab_wrap > li:last-child > a{left:54%;}
+    .con01 li:last-child, .con02 li:last-child{display:block;}
+    .promo_tab_wrap div > ul{display:block;}
+    .promo_tab_wrap div > ul > li{width:75%; margin:0 auto;}
+  }
+  @media screen and (max-width:425px){.promo_tab{height:1380px;}}
+  @media screen and (max-width:390px){.promo_tab{height:1310px;}}
+
+  /* 3. 웰니스 콘텐츠 서식 ------------------------------------------------ */
+  .wellness i.fas{font-size:2rem;}
+  .wellness i.fa-angle-left{left:1%;}
+  .wellness i.fa-angle-right{right:1%;}
+  .well_txt{top:46%; width:90%;}
+  .well_txt > p{font-size:2.5rem;}
+  .well_slide{height:250px;}
+
+  @media screen and (max-width:630px){
+    .well_txt{top:48%;}
+    .well_txt > p{font-size:2.3rem;}
+    .well_wrap > div > a img{width:120%;}
+  }
+  @media screen and (max-width:530px){
+    .well_txt{top:50%;}
+    .well_txt > p{font-size:2.1rem;}
+    .well_wrap > div > a img{width:130%;}
+  }
+  @media screen and (max-width:480px){
+    .wellness i.fas{top:53%;}
+    .well_slide{height:230px;}
+    .well_wrap > div > a img{width:150%;}
+    .well_txt{top:48%;}
+    .well_txt > h3{font-size:1rem;}
+    .well_txt > p{font-size:2rem;}
+  }
+  @media screen and (max-width:425px){
+    .well_wrap > div > a img{width:160%;}
+    .well_txt{top:47%;}
+  }
+  @media screen and (max-width:395px){
+    .wellness i.fas{top:55%;}
+    .well_wrap > div > a img{width:170%;}
+  }
+  @media screen and (max-width:384px){
+    .wellness i.fas{top:60%;}
+  }
+
+  /* 4. 다이닝 콘텐츠 서식 ------------------------------------------------ */
+  .dining{height:880px;}
+  .dining_wrap > ul{flex-wrap:wrap;}
+  .dining_wrap > ul > li:first-child{display:block;}
+  .dining_wrap > ul > li{width:30%; padding:10px 0px;}
+  .dining_wrap > ul{padding:10px 5px;}
+
+  @media screen and (max-width:725px){.dining{height:820px;}}
+  @media screen and (max-width:675px){.dining{height:780px;}}
+  @media screen and (max-width:640px){.dining{height:740px;}}
+  @media screen and (max-width:600px){.dining{height:700px;}}
+  @media screen and (max-width:550px){.dining{height:650px;}}
+  @media screen and (max-width:475px){.dining{height:620px;}}
+  @media screen and (max-width:410px){.dining{height:590px;}}
+
+  /* 5. 웨딩 서비스 서식 ------------------------------------------------ */
+  .wed_service > article{height:170px;}
+  .wed_service img{top:-60%;}
+  .wed_txt{width:80%;}
+  .wed_txt > h3{font-size:1.8rem !important;}
+  .more_btn{font-size:0.9rem;}
+  .wed_txt > p{padding-bottom:12px;}
+
+  @media screen and (max-width:700px){.wed_service img{top:-40%;}}
+  @media screen and (max-width:570px){.wed_service img{top:-20%;}}
+  @media screen and (max-width:490px){
+    .wed_service > article{height:150px;}
+    .wed_service img{top:0px;}
+    .wed_txt > h3{font-size:1.6rem !important;}
+    .more_btn{font-size:0.8rem;}
+  }
+  @media screen and (max-width:415px){.wed_txt{width:90%;}}
+  @media screen and (max-width:370px){
+    .wed_service > article{height:200px;}
+    .wed_service img{width:140%;}
+    .wed_txt{top:40%;width:70%;}
+    .wed_txt > h3{line-height:30px;}
+  }
 
   /* 6. 갤러리 콘텐츠 서식 ------------------------------------------------ */
+  .gallery{
+    width:96%;
+    grid-template-columns:repeat(2, 40%);
+    grid-template-rows:repeat(4, auto);
+    padding:100px 20px 50px;
+    grid-row-gap:12px;
+    grid-column-gap:12px;
+  }
+  .gallery > .i05{display:none;}
+  .gallery > .i10{display:none;}
+  .gallery > .i01{grid-area:1/1/3/2;}
+  .gallery > .i04{grid-area:3/2/5/3;}
+  .gallery > article{overflow:visible;}
+  .gallery > .i01 .g_txt, .gallery > .i04 .g_txt{height:70px !important;}
+  .gallery > .i01 .g_txt > p, .gallery > .i04 .g_txt > p{line-height:58px;}
+  .gallery > .i01 .more_btn2, .gallery > .i04 .more_btn2{bottom:14px !important;}
+  .g_txt{
+    position:static;
+    background:#fcefdc;
+    width:100%; height:40px;
+  }
+  .g_txt > p{margin-top:0px;padding-top:4px;}
+  .more_btn2{bottom:0px;}
 
-  /* .gallery > .i01{grid-area:1/1/3/2;} */
-  /* .gallery > .i04{grid-area:3/2/5/3;} */
+  @media screen and (max-width:650px){
+    .gallery{grid-template-columns:repeat(2, 48%);}
+    .gallery > .i01 .g_txt, .gallery > .i04 .g_txt{height:75px !important;}
+    .gallery > .i01 .g_txt > p, .gallery > .i04 .g_txt > p{line-height:70px;}
+  }
+  @media screen and (max-width:445px){
+    .more_btn2{right:2px;}
+    .g_txt > p{text-indent:2px;}
+  }
+  @media screen and (max-width:410px){
+    .gallery{
+      display:block;
+      width:50%;
+    }
+    .gallery > article{padding-bottom:10px;}
+  }
 
+  /* 모달 창 서식 */
+  .modal div{max-width:50%;}
 
 
 

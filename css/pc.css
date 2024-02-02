@@ -24,6 +24,7 @@ header h1 img{width:100%;}
   text-align:center;
 }
 .h_right > ul > li{width:100px;}
+.h_left i.fa-user, .h_right i.fa-calendar-check{display:none;}
 .h_left a, .h_right > ul a{
   color:#fff;
   font-size:1.2rem;

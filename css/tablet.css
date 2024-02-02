@@ -72,10 +72,7 @@
   /* 2. 프로모션 탭 콘텐츠 서식 ------------------------------------------------ */
   .promo_tab{height:665px;}
   .promo_tab > article{padding:0px;}
-  .promo_tab_title{
-    width:100%;
-    padding:4% 0px;
-  }
+  .promo_tab_title{width:100%;padding:4% 0px;}
   .promo_tab_wrap{width:100%;}
   .promo_tab_title > p{margin-top:0px;}
   .promo_tab_wrap div > ul{padding:30px 0px;}
@@ -85,9 +82,7 @@
   .promo_tab_wrap > li > div li{width:30%;}
 
   /* 3. 웰니스 콘텐츠 서식 ------------------------------------------------ */
-  .well_txt > p{
-    font-size:3.2rem;
-  }
+  .well_txt > p{font-size:3.2rem;}
   @media screen and (max-width:1000px){
     .well_txt{top:48%;}
   }
@@ -132,7 +127,7 @@
   .gallery > .i05{display:none;}
   .gallery > .i10{display:none;}
   .gallery > article{overflow:visible;}
-  .gallery > .i01 .g_txt, .gallery > .i04 .g_txt{height:64px !important;}
+  .gallery > .i01 .g_txt, .gallery > .i04 .g_txt{height:80px !important;}
   .gallery > .i01 .more_btn2, .gallery > .i04 .more_btn2{bottom:14px !important;}
   .g_txt{
     position:static;

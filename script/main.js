@@ -5,6 +5,7 @@ $(document).ready(function(){
   // 내비게이션 gnb -------------------------------------------------------------
   let toggle = $('#toggle');
   let gnb = $('header .gnb > ul > li > a');
+  let sub = $('header .gnb .sub');
 
   // 토글버튼 클릭시 gnb 노출
   toggle.click(function(){
@@ -19,7 +20,12 @@ $(document).ready(function(){
       gnb.click(function(){
         //$('.sub').hide(); //보이는 서브 숨기고
         // 선택한 서브만 보이게한다.
-        $(this).next().toggle().parent().siblings().find('.sub').hide();
+        $(this).css('color','green').parent().siblings().find('a').css('color','#333');
+        $(this).next().show().parent().siblings().find('.sub').hide();
+        $(this).find('i.fas').toggleClass('rotate1');
+      });
+      $('#toggle').click(function(){
+        $('.gnb').Toggle();
       });
     }
 
@@ -266,6 +272,11 @@ $(document).ready(function(){
     }else{
       $('.t_btn').removeClass('act');
     }
+    return false;
+  });
+
+  $('.t_btn').click(function(){
+    $('html').animate({'scrollTop':'0px'},500);
     return false;
   });
 
