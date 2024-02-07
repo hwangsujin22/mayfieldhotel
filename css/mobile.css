@@ -274,6 +274,24 @@
   /* 모달 창 서식 */
   .modal div{max-width:50%;}
 
+  /* 푸터 서식 ------------------------------------------------------------ */
+  .f_top{padding:20px 50px;}
+  .f_top a, .f_bottom > p{font-size:0.9rem;}
+  address{font-size:0.8rem;}
+  .f_bottom{padding:0px 50px 20px;}
+
+  @media screen and (max-width:640px){
+    address{line-height:20px;}
+    .f_bottom{height:100px;}
+    .f_sns{top:60px;}
+  }
+  @media screen and (max-width:425px){
+    .f_top > ul{width:240px;}
+  }
+  @media screen and (max-width:360px){
+    .f_top > ul{width:200px;}
+  }
+
 
 
 }

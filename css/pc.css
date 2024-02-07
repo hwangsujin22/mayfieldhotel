@@ -70,7 +70,7 @@ header h1 img{width:100%;}
   font-weight:600;
   text-transform:uppercase;
 }
-.gnb > ul a:hover{color:green;font-weight:bold;}
+.gnb > ul a:hover{color:#008000;font-weight:bold;}
 
 /* 서브메뉴 서식 */
 .sub > li > a{font-size:1rem;}
