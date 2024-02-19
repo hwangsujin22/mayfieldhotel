@@ -481,10 +481,13 @@ header h1 img{width:100%;}
   z-index:1000;
 }
 .modal div{
-  max-width:540px;
+  width:30%;
   position:absolute;
   top:50%; left:50%;
   transform:translate(-50%, -50%);
+}
+@media screen and (max-width:1400px){
+  .modal div{width:40%;}
 }
 .center img{width:100%;}
 .center h3{font-size:18px;}
@@ -495,8 +498,8 @@ header h1 img{width:100%;}
   position:absolute;
 }
 .modal i.fa-times{top:-20px; right:-50px;}
-.modal i.fa-angle-left{top:50%; left:-50px;}
-.modal i.fa-angle-right{top:50%; right:-50px;}
+.modal i.fa-angle-left{top:46%; left:-50px;}
+.modal i.fa-angle-right{top:46%; right:-50px;}
 
 /* 푸터 서식 ------------------------------------------------------------ */
 footer{

@@ -264,15 +264,23 @@
     .g_txt > p{text-indent:2px;}
   }
   @media screen and (max-width:410px){
-    .gallery{
-      display:block;
-      width:50%;
-    }
+    .gallery{display:block;width:75%;}
     .gallery > article{padding-bottom:10px;}
+    .more_btn2{bottom:8px;}
+    .i01 .g_txt .more_btn2, .i04 .g_txt .more_btn2{bottom:24px !important;}
   }
 
   /* 모달 창 서식 */
-  .modal div{max-width:50%;}
+  .modal div{width:60%;}
+  @media screen and (max-width:670px){
+    .modal div{width:70%;}
+  }
+  @media screen and (max-width:400px){
+    .modal div{width:80%;}
+    .modal i.fa-times{right:0px;}
+  }
+  .modal i.fas:not(i.fa-times){position:static;font-size:20px; padding:2px 10px;}
+  .modal i.fa-times{font-size:30px;}
 
   /* 푸터 서식 ------------------------------------------------------------ */
   .f_top{padding:20px 50px;}

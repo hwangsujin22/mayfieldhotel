@@ -212,8 +212,8 @@ $(document).ready(function(){
           <img src=${img_src} alt="">
           <i class="fas fa-times"></i>
           <i class="fas fa-angle-left"></i>
-          <i class="fas fa-angle-right"></i>
           <span class="page_n">${i}/8</span>
+          <i class="fas fa-angle-right"></i>
         </div>
       </div>
     `;
@@ -253,7 +253,7 @@ $(document).ready(function(){
       $('.modal h3').text($('.gallery article').eq(i).find('.g_txt p').text());
 
       // 3. 인덱스 번호에 맞는 이미지 출력하기
-      $('.modal img').attr('src', './images/gallery0'+i+'.png');
+      $('.modal img').attr('src', './images/gallery0'+i+'.jpg');
 
       };
 
