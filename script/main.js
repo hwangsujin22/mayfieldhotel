@@ -2,6 +2,18 @@
 // 외부 제이쿼리 서식
 
 $(document).ready(function(){
+  const login = $('.h_left > a');
+  const reserv = $('.h_right > ul > li > a')
+
+  login.click(function(){
+    alert('현재 준비 중인 페이지입니다.')
+    return false;
+  });
+  reserv.click(function(){
+    alert('현재 준비 중인 페이지입니다.')
+    return false;
+  });
+
   // 내비게이션 gnb -------------------------------------------------------------
   let toggle = $('#toggle');
   let gnb = $('header .gnb > ul > li > a');
