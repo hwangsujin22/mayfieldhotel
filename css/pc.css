@@ -34,6 +34,7 @@ header h1 img{width:100%;}
   width:60px; height:30px;
   text-align:center;
   position:relative;
+  cursor:pointer;
 }
 #toggle span{
   background:#fff;
@@ -71,6 +72,8 @@ header h1 img{width:100%;}
   text-transform:uppercase;
 }
 .gnb > ul a:hover{color:#008000;font-weight:bold;}
+.color1{color:green;}
+.rotate1{transform:rotate(180deg);}
 
 /* 서브메뉴 서식 */
 .sub > li > a{font-size:1rem;}
@@ -107,6 +110,7 @@ header h1 img{width:100%;}
   font-size:2.4rem;
   padding:4px 6px;
   margin-right:10px;
+  cursor:pointer;
 }
 .m_slide i.fa-angle-left{left:2%;}
 .m_slide i.fa-angle-right{right:2%;}
@@ -206,6 +210,7 @@ header h1 img{width:100%;}
   top:60%;
   font-weight:500;
   font-size:1.1rem;
+  display:block;
 }
 .tab_act{color:green; font-weight:bold;}
 .promo_tab_wrap > li:first-child > a{left:-32%;}
@@ -287,6 +292,7 @@ header h1 img{width:100%;}
   top:50%;
   font-size:2.4rem;
   padding:5px 10px;
+  cursor:pointer;
 }
 .wellness i.fa-angle-left{left:5%;}
 .wellness i.fa-angle-right{right:5%;}
@@ -322,22 +328,20 @@ header h1 img{width:100%;}
   overflow:hidden;
 }
 .dining_wrap > ul > li img{width:100%;transition:0.5s;}
-.dining_wrap > ul > li p{
+.dining_wrap > ul > li a div{
   position:absolute;
-  top:50%; left:50%;
-  transform:translate(-50%, -90%);
+  top:0; left:0;
+  /* transform:translate(-50%, -90%); */
   display:none;
-  width:300px;
+  width:100%; height:100%;
   font-size:1.1rem;
   font-weight:500;
   text-align:center;
-  background:#fff;
+  background:#ffffff3f;
   color:#015c01;
   padding:10px 0px;
 }
-.dining_wrap > ul > li:last-child p{
-  transform:translate(-50%, -70%) !important;
-}
+
 @media screen and (max-width:1600px){
   .dining_wrap > ul > li{width:15%;}
 }

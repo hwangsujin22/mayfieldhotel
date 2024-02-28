@@ -2,6 +2,7 @@
 
 /* 모바일 서식 */
 @media screen and (max-width:767px) {
+  .t_btn{right:20px;bottom:60px;}
   /* 헤더 서식 ------------------------------------------------------------ */
   header{height:65px;}
   header h1{width:140px;}
@@ -46,9 +47,7 @@
     z-index:100;
     background:#e8e8e8;
   }
-  .rotate1{
-    transform:rotate(180deg);
-  }
+
   /* 메인서식---------------------------------------------------------------- */
   /* 1. 메인 슬라이드 서식 */
   .m_slide{height:500px;}

@@ -17,31 +17,30 @@ $(document).ready(function(){
   // 내비게이션 gnb -------------------------------------------------------------
   let toggle = $('#toggle');
   let gnb = $('header .gnb > ul > li > a');
-  let sub = $('header .gnb .sub');
 
   // 토글버튼 클릭시 gnb 노출
   toggle.click(function(){
     $('header .gnb').fadeToggle();
   });
+  // gnb메뉴 클릭시 해당 서브메뉴 보이게 하기
+  gnb.click(function(){
+    //$('.sub').hide(); //보이는 서브 숨기고
+    // 선택한 서브만 보이게한다.
+    $(this).css('color','green').parent().siblings().find('a').css('color','#333');
+    $(this).find('i').addClass('rotate1');
+    $(this).next().toggle().parent().siblings().find('.sub').hide();
+  });
 
-  $(window).resize(function(){
-    w_width = $(window).innerWidth();
-
-    if(w_width<=767){
-      // gnb메뉴 클릭시 해당 서브메뉴 보이게 하기
-      gnb.click(function(){
-        //$('.sub').hide(); //보이는 서브 숨기고
-        // 선택한 서브만 보이게한다.
-        $(this).css('color','green').parent().siblings().find('a').css('color','#333');
-        $(this).next().show().parent().siblings().find('.sub').hide();
-        $(this).find('i.fas').toggleClass('rotate1');
-      });
-      $('#toggle').click(function(){
-        $('.gnb').Toggle();
-      });
-    }
-
-  }).resize();
+  // $(window).resize(function(){
+  //   w_width = $(window).innerWidth();
+  //     let gnb_width = $('.gnb').innterWidth();
+  //     if(gnb_width>=707){
+  //       gnb.click(function(){
+  //         return false;
+  //       });
+  //     }
+  //     //707
+  // }).resize();
 
   // 1. 메인 슬라이드 -----------------------------------------------------------
   const l_btn = $('.m_slide i.fa-angle-left'); //왼쪽 버튼
@@ -76,16 +75,26 @@ $(document).ready(function(){
   // 좌,우 버튼 클릭시 해당하는 방향으로 슬라이드 이미지가 나오게 하기
   l_btn.click(function(){
     bannerEffect2();
-    // clearInterval(Timer);
+  });
+  l_btn.mouseenter(function(){
+    clearInterval(Timer);
+  });
+  l_btn.mouseleave(function(){
+    Timer = setInterval(bannerEffect, 5000);
   });
   r_btn.click(function(){
     bannerEffect();
-    // clearInterval(Timer);
+  });
+  r_btn.mouseenter(function(){
+    clearInterval(Timer);
+  });
+  r_btn.mouseleave(function(){
+    Timer = setInterval(bannerEffect, 5000);
   });
 
   // 2. 프로모션 탭 콘텐츠 --------------------------------------------------------
   let tab_mnu = $('.promo_tab_wrap > li > a');
-  $('.promo_tab_wrap li:first-child div').show();
+  $('.promo_tab_wrap li:first-child div').fadeIn();
   tab_mnu.click(function(){
     $(this).next().show().parent().siblings().find('div').hide();
 
@@ -149,12 +158,12 @@ $(document).ready(function(){
 
     if(w_width>=1025){
       d_list.mouseenter(function(){
-        $(this).find('p').fadeIn();
+        $(this).find('div').fadeIn();
         $(this).find('img').css('transform','scale(1.1)');
         // $(this).css('background','rgba(255,255,255,.5)');
       });
       d_list.mouseleave(function(){
-        $(this).find('p').fadeOut();
+        $(this).find('div').fadeOut();
         $(this).find('img').css('transform','scale(1.0)');
       });
     }
@@ -262,7 +271,7 @@ $(document).ready(function(){
       $('.modal .page_n').text(i+'/8');
 
       // 2. 인덱스번호에 맞는 제목으로 변경
-      $('.modal h3').text($('.gallery article').eq(i).find('.g_txt p').text());
+      $('.modal h3').text($('.gallery article').eq(i-1).find('.g_txt p').text());
 
       // 3. 인덱스 번호에 맞는 이미지 출력하기
       $('.modal img').attr('src', './images/gallery0'+i+'.jpg');
@@ -287,9 +296,8 @@ $(document).ready(function(){
     return false;
   });
 
-  $('.t_btn').click(function(){
-    $('html').animate({'scrollTop':'0px'},500);
-    return false;
+  $('.t_btn > i.fas').click(function(){
+    $('html, body').animate({'scrollTop':'0px'},300);
   });
 
 });
