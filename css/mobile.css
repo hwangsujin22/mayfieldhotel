@@ -35,17 +35,20 @@
     display:block;
     text-align:center;
   }
-  .gnb > ul > li i.fas{display:inline;}
-  .gnb > ul > li > a{font-size:1rem;}
-  .gnb > ul > li a:hover{color:#333;font-weight:600;}
-  .gnb .sub > li a:hover{color:#333;font-weight:normal;}
+  .gnb > ul > li i.fas{display:inline-block;}
+  .gnb > ul > li > label{font-size:1rem;}
   .sub > li a{font-size:0.9rem;}
   .sub{
     display:none;
     box-shadow:0px 3px 2px #ccc;
     border:1px solid #ccc;
     z-index:100;
-    background:#e8e8e8;
+    background:#FBF9F6;
+  }
+  .gnb > ul > li > input[type="checkbox"]:checked ~ .sub{display:block;}
+  .gnb > ul > li > input[type="checkbox"]:checked + label{color:green;}
+  .gnb > ul > li > input[type="checkbox"]:checked + label > i.fa-angle-down{
+    transform:rotate(180deg) translate(-10px, 1px);
   }
 
   /* 메인서식---------------------------------------------------------------- */

@@ -13,17 +13,10 @@
   #toggle span:nth-child(2){top:12px;}
 
   /* 메인메뉴 gnb 서식 */
-  .gnb > ul > li > a{
+  .gnb > ul > li > label{
     font-size:1rem;
   }
-  .gnb > ul > li a:hover{
-    color:#333;
-    font-weight:600;
-  }
-  .gnb .sub > li a:hover{
-    color:#333;
-    font-weight:normal;
-  }
+  .sub{display:block;}
   .sub > li a{font-size:0.9rem;}
   @media screen and (max-width:800px){
     .sub > li a{font-size:0.8rem;}

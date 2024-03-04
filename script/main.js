@@ -22,25 +22,6 @@ $(document).ready(function(){
   toggle.click(function(){
     $('header .gnb').fadeToggle();
   });
-  // gnb메뉴 클릭시 해당 서브메뉴 보이게 하기
-  gnb.click(function(){
-    //$('.sub').hide(); //보이는 서브 숨기고
-    // 선택한 서브만 보이게한다.
-    $(this).css('color','green').parent().siblings().find('a').css('color','#333');
-    $(this).find('i').addClass('rotate1');
-    $(this).next().toggle().parent().siblings().find('.sub').hide();
-  });
-
-  // $(window).resize(function(){
-  //   w_width = $(window).innerWidth();
-  //     let gnb_width = $('.gnb').innterWidth();
-  //     if(gnb_width>=707){
-  //       gnb.click(function(){
-  //         return false;
-  //       });
-  //     }
-  //     //707
-  // }).resize();
 
   // 1. 메인 슬라이드 -----------------------------------------------------------
   const l_btn = $('.m_slide i.fa-angle-left'); //왼쪽 버튼
